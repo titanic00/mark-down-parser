@@ -14,7 +14,7 @@ function App() {
     width: "30%",
     textarea: {
       height: "900px",
-    },
+    }
   };
 
   const handleChange = (event) => {
@@ -29,22 +29,22 @@ function App() {
     }
     setStyle(true);
   };
-
   const hideInputField = () => {
     if (isHidden) {
       hiddenState(false);
       return;
     }
-    console.log("hehe");
     hiddenState(true);
   };
 
   return (
-    <div>
-      <div id="input-field" style={{ display: isHidden ? "none" : "block" }}>
+    <div> 
+      <div id="input-field" style={{ display: isHidden ? "none" : "block" }}> {/* // if user clicks on 
+      the output fields button we hide "input-field" div  */} 
         <div className="switch">
+          <span className="header">Input Field</span>
           <button className="button" onClick={handleClick}>
-            <i
+            <i  // change icon if on click
               className={buttonIsClicked ? "fas fa-compress" : "fa fa-compress"}
             ></i>
           </button>
@@ -64,6 +64,7 @@ function App() {
           />
         </div>
       </div>
+      {/* parse inputed text */}
       {buttonIsClicked && (
         <ParsedInput
           style={style}
