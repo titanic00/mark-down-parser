@@ -1,3 +1,14 @@
 #text-parsed-input {
-    height: 800px;
+    border: 1px solid black;
+    overflow: scroll;
+    background-color: white;
+}
+
+#parsed-input {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.second-section {
+    width: 100%;
 }
